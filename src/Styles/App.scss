@@ -1,0 +1,23 @@
+@import "custom_bootstrap/custom_bootstrap";
+
+body {
+  font-family: sans-serif;
+  color: black;
+  background-color: white;
+}
+
+.mainDiv {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+a{
+  color: pink;
+  text-decoration: none !important;
+  &:hover {
+        color:#fffe98;
+    }
+}

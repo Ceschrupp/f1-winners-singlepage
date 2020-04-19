@@ -1,0 +1,13 @@
+@import "custom_bootstrap/custom_bootstrap";
+
+.footerContainer{
+	background-color: black;
+		.footer{
+				p{
+					text-align: right;
+					color: $f1-white;
+					padding: 20px;
+					margin-bottom: 0px;
+				}
+		}
+}

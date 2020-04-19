@@ -1,0 +1,26 @@
+@import "custom_bootstrap/custom_bootstrap";
+body{
+	font-family: sans-serif;
+}
+.cardsContainer{
+	max-width: 1000px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	.cards{
+		text-align: center;
+		
+		.cardsBg{
+			padding:10px;
+			//border: 5px solid $f1-red;
+			margin-top: 15px;
+			border-radius: 20px;
+			h1{
+				padding: 10px;
+				background-color: $f1-gray;
+				border-radius: 20px;
+				font-weight: bold;
+			}
+		}
+	}
+}
