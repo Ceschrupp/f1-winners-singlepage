@@ -1,18 +1,11 @@
-import React, {Component} from 'react'
+import React from 'react'
 import logo from '../Img/logo192.png'
 import'../Styles/Header.scss'
 
 
 
-class Header extends Component{
+function Header(props){
 
-    constructor(props) {
-      super(props);
-
-    }
-
-
-	render(){
 		return(
       <div>
         <div className="container-fluid headerContainer">
@@ -26,7 +19,7 @@ class Header extends Component{
         </div>
       </div>
 		)
-	}
+
 }
 
 export default Header;

@@ -2,31 +2,34 @@ import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 import AppContext from './AppContext.js';
 import { AccountConsumer } from './AppContext.js';
+import WinnersInfo from './WinnersInfo.js';
+import preload from '../Img/preload.gif'
 import'../Styles/Main.scss'
 
 
 class Main extends Component{
 	render(){
-
-      const carded = (this.props.context.cards.map((card, index) =>
-					<div className="col-md-4 cards">
-						<div className="cardsBg">
-							<h1>2015</h1>
-							<h2>{card.name}</h2>
-							<h2>{card.team}</h2>
-							<h3>{card.nationality}</h3>
-							<h4>{card.points}</h4>
-							<h4>{card.wins}</h4>
+		if (this.props.context.loading) {
+				return(
+					<div className="container preloadContainer">
+						<div className="row">
+							<div className="col-md-12 preload">
+								<img src={preload} alt=""/>
+								<h3>Loading...</h3>
+							</div>
 						</div>
 					</div>
-
-                  )
-                )		
+				)
+		}
 		return(
-			<div className="container cardsContainer">
+			<div className="container mainContainer">
 				<div className="row">
-					{carded}
+					<div className="col-md-12 infoContainer">
+						<h1>Formula 1 Season Winners from 2005 to 2015</h1>
+						<h3>Click on the season to see the races</h3>
+					</div>
 				</div>
+				<WinnersInfo/>
 			</div>
 		)
 	}

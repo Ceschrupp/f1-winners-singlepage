@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import AppContext from './AppContext.js';
 import { AccountConsumer } from './AppContext.js';
+import'../Styles/DetailPage.scss'
 
 class DetailPage extends Component{
 	render(){
@@ -17,10 +18,10 @@ class DetailPage extends Component{
                   )
                 )		
 		return(
-			<div className="container cardsContainer">
+			<div className="container raceContainer">
 				<div className="row">
-					<div className="col-12 cards table-responsive">
-						<div className="cardsBg">
+					<div className="col-12 table-responsive">
+						<div className="race">
 							<table class="table">
 							  <thead>
 							    <tr>

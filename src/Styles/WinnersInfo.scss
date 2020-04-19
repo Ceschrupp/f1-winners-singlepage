@@ -1,0 +1,33 @@
+@import "custom_bootstrap/custom_bootstrap";
+
+	.cards{
+		text-align: center;
+		.cardsBg{
+			padding:10px;
+			margin-top: 25px;
+			border-radius: 20px;
+			-webkit-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+			box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+			cursor: pointer;
+			h1{
+				padding: 10px;
+				background-color: $f1-gray;
+				border-radius: 20px;
+				font-weight: bold;
+				font-size: 25px;
+			}
+			h2{
+				font-size: 20px;
+			}
+			h3{
+				font-size: 18px;
+			}
+			h4{
+				font-size: 15px;
+			}
+			&:hover{
+				padding: 5px;
+			}
+		}
+	}

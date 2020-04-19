@@ -10,89 +10,12 @@ class AppProvider extends Component {
 
 		super(props);
 
+
 		this.state = {
-
-			cards : [
-		        {
-		          name: 'Máximo Cozzetti',
-		          team: 'Team',
-		          nationality: 'Argentina',
-		          points:'10',
-		          wins: '12'
-		        },
-		        {
-		          name: 'Máximo Cozzetti',
-		          team: 'Team',
-		          nationality: 'Argentina',
-		          points:'10',
-		          wins: '12'
-		        },
-		        {
-		          name: 'Máximo Cozzetti',
-		          team: 'Team',
-		          nationality: 'Argentina',
-		          points:'10',
-		          wins: '12'
-
-		        },
-		        {
-		          name: 'Máximo Cozzetti',
-		          team: 'Team',
-		          nationality: 'Argentina',
-		          points:'10',
-		          wins: '12'
-		        },
-		        {
-		          name: 'Máximo Cozzetti',
-		          team: 'Team',
-		          nationality: 'Argentina',
-		          points:'10',
-		          wins: '12'
-
-		        },
-		        {
-		          name: 'Máximo Cozzetti',
-		          team: 'Team',
-		          nationality: 'Argentina',
-		          points:'10',
-		          wins: '12'
-
-		        },
-		    	{
-		          name: 'Máximo Cozzetti',
-		          team: 'Team',
-		          nationality: 'Argentina',
-		          points:'10',
-		          wins: '12'
-
-		        },
-		        {
-		          name: 'Máximo Cozzetti',
-		          team: 'Team',
-		          nationality: 'Argentina',
-		          points:'10',
-		          wins: '12'
-
-		        },
-		        {
-		          name: 'Máximo Cozzetti',
-		          team: 'Team',
-		          nationality: 'Argentina',
-		          points:'10',
-		          wins: '12'
-
-		        },
-		        {
-		          name: 'Máximo Cozzetti',
-		          team: 'Team',
-		          nationality: 'Argentina',
-		          points:'10',
-		          wins: '12'
-
-		        },		        
-
-		      ],	
-	races : [
+			apiCall: this.apiCall,
+			cards: [],
+			loading: true,
+			races : [
 		        {
 		          race: 'Máximo Cozzetti',
 		          driver: 'Team',
@@ -169,6 +92,25 @@ class AppProvider extends Component {
 		}
 	}
 
+	componentDidMount(){
+		this.apiCall();
+	}
+
+	apiCall(){
+    	axios.get('https://ergast.com/api/f1/driverStandings/1.json?limit=11&offset=55')
+		  .then(function (response) {
+			this.setState({
+				cards: response.data.MRData.StandingsTable.StandingsLists,
+				loading: false,
+			},);
+			
+			console.log(response.data.MRData.StandingsTable.StandingsLists)
+		  }.bind(this))
+		  .catch(function (error) {
+		    // handle error
+		    console.log(error);
+		  }.bind(this))
+    }
 
 	render() {
 

@@ -1,17 +1,9 @@
-import React, {Component} from 'react'
+import React from 'react'
 import'../Styles/Footer.scss'
 
 
 
-class Footer extends Component{
-
-    constructor(props) {
-      super(props);
-
-    }
-
-
-	render(){
+function Footer(props){
 		return(
       <div>
         <div className="container-fluid footerContainer">
@@ -23,7 +15,6 @@ class Footer extends Component{
         </div>
       </div>
 		)
-	}
 }
 
 export default Footer;
