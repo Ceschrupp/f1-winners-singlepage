@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { AccountConsumer } from './AppContext.js';
 import'../styles/WinnersInfo.scss'
 
-//component for maping the data from the apicall
+//component for maping the data from the api call
 
 class WinnersInfo extends Component{
 

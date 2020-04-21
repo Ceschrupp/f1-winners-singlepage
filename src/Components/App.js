@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import AppContext from './AppContext.js';
 import Header from './Header.js';
@@ -6,8 +6,8 @@ import Footer from './Footer.js';
 import Main from './Main.js';
 import DetailPage from './DetailPage.js';
 
-class App extends Component{
-  render(){
+function App (){
+
     return(
       <AppContext>
         <BrowserRouter>
@@ -21,7 +21,7 @@ class App extends Component{
         </BrowserRouter>
       </AppContext>
     )
-  }
+  
 }
 
 export default App;

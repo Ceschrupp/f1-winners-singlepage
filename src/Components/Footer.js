@@ -1,7 +1,5 @@
 import React from 'react'
-import'../Styles/Footer.scss'
-
-
+import'../styles/Footer.scss'
 
 function Footer(props){
 		return(

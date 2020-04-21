@@ -1,4 +1,5 @@
 @import "custom_bootstrap/custom_bootstrap";
+
 .raceContainer{
 	max-width: 1000px;
 	margin-top: 50px;
@@ -6,10 +7,9 @@
 	-webkit-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
 	box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
-	border-radius: 20px;
+	border-radius: 10px;
 	.race{
 		padding: 20px;
-
 		margin:20px;
 		
 
@@ -18,10 +18,28 @@
     		font-weight: bold;
 		}
 	}
+	.backButton{
+		padding: 30px;
+
+		.button{
+			font-weight:bold;
+			font-size:20px;
+			i{
+				font-size: 20px;
+			}
+		}
+
+
+	}
 	.racesTxt{
 		text-align: center;
 		h1{
 			font-weight: bold;
+		}
+		@media(max-width: 992px){
+			h1{
+				font-size: 25px;
+			}
 		}
 	}
 }

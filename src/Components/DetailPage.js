@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { AccountConsumer } from './AppContext.js';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import preload from '../img/preload.gif'
 import'../styles/DetailPage.scss'
@@ -72,6 +73,9 @@ class DetailPage extends Component{
 		return(
 			<div className="container raceContainer" >
 				<div className="row">
+					<div className="col-12 backButton">
+						<NavLink to='/'><div className="button"><i class="fa fa-caret-left"></i> Back to Winners</div></NavLink>
+					</div>
 					<div className="col-12 racesTxt">
 						<h1>List of all races of {this.props.match.params.year} </h1>
 					</div>
