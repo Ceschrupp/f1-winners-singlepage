@@ -1,13 +1,21 @@
 import React, {Component} from 'react';
-import { NavLink } from 'react-router-dom';
-import AppContext from './AppContext.js';
 import { AccountConsumer } from './AppContext.js';
 import WinnersInfo from './WinnersInfo.js';
-import preload from '../Img/preload.gif'
-import'../Styles/Main.scss'
+import preload from '../img/preload.gif'
+import'../styles/Main.scss'
 
+//Container for the Home page that calls the WinnersInfo component
 
 class Main extends Component{
+
+	componentDidMount(){
+
+		//running function that comes from the context
+		
+		this.props.context.winnersApiCall();
+
+	}
+
 	render(){
 		if (this.props.context.loading) {
 				return(

@@ -1,6 +1,7 @@
 import React from 'react'
-import logo from '../Img/logo192.png'
-import'../Styles/Header.scss'
+import logo from '../img/logo192.png'
+import { NavLink } from 'react-router-dom';
+import'../styles/Header.scss'
 
 
 
@@ -10,9 +11,11 @@ function Header(props){
       <div>
         <div className="container-fluid headerContainer">
           <div className="row">
-              <div className="col-2 logo">
-                <img className="img-fluid" src={logo} alt=""/>
-              </div>
+              <NavLink to="/">
+                <div className="col-2 logo">
+                  <img className="img-fluid" src={logo} alt=""/>
+                </div>
+              </NavLink>
               <div className="col-10">
               </div>
           </div>

@@ -74,7 +74,7 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $new-yellow !default;
+$primary:       $f1-gray !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -87,7 +87,7 @@ $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
-    "primary":    $primary,
+    "primary":    $dark,
     "secondary":  $secondary,
     "success":    $success,
     "info":       $info,

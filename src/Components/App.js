@@ -10,14 +10,15 @@ class App extends Component{
   render(){
     return(
       <AppContext>
-        <Header/>
         <BrowserRouter>
+          <Header/>
           <Switch>
             <Route path='/' component={Main} exact/>
-            <Route path='/detailPage' component={DetailPage}/>
+            <Route path='/detail/:year/:winner' component={DetailPage}/>
+            <Route path='*' component={Main} exact/>
           </Switch>
+         <Footer/> 
         </BrowserRouter>
-        <Footer/>
       </AppContext>
     )
   }
