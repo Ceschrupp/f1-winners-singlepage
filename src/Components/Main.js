@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import { AccountConsumer } from './AppContext.js';
 import WinnersInfo from './WinnersInfo.js';
-import preload from '../img/preload.gif'
-import'../styles/Main.scss'
+import preload from '../Img/preload.gif'
+import'../Styles/Main.scss'
 
 //Container for the Home page that calls the WinnersInfo component
 

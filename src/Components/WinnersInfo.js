@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 import { AccountConsumer } from './AppContext.js';
-import'../styles/WinnersInfo.scss'
+import'../Styles/WinnersInfo.scss'
 
 //component for maping the data from the api call
 

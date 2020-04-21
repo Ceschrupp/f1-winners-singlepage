@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import { AccountConsumer } from './AppContext.js';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
-import preload from '../img/preload.gif'
-import'../styles/DetailPage.scss'
+import preload from '../Img/preload.gif'
+import'../Styles/DetailPage.scss'
 
 //Detail page for showing the races of each year
 
